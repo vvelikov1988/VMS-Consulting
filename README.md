@@ -43,3 +43,6 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 ## Copyright and License
 
 Copyright 2020 Blackrock Digital LLC. This theme is copyrighted, and a valid license must be purchased from the Start Bootstrap Shop in order to use. For more information, visit the [SB UI Kit Pro](https://shop.startbootstrap.com/products/sb-ui-kit-pro/) product page on the Start Bootstrap Shop.
+
+## I did purchase the SB UI Kit pro for this project.  I changed all the photos and text from the original.  Some styling ## was changed
+## for the purpose of what it was purchased for.  Thank you

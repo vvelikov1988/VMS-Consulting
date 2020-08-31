@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Profile Contact Page Viktor</title>
+        <title>User Profile Auto Populated</title>
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
         <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
@@ -21,25 +21,26 @@
                             <a class="navbar-brand text-dark" href="#">VMS Consulting</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto mr-lg-5">
-                                    <li class="nav-item"><a class="nav-link" href="landing-agency.html">Home </a></li>
-                                    <li class="nav-item"><a class="nav-link" href="page-portfolio-grid.html">Portfolio </a></li>
-                                    <li class="nav-item"><a class="nav-link" href="page-company-contact.html">Contact </a></li>
-                                    <li class="nav-item"><a class="nav-link" href="page-company-contact.html">Login </a></li>
-                                    <li class="nav-item"><a class="nav-link" href="landing-lead-capture.html">Register </a></li>
+                                    <li class="nav-item"><a class="nav-link" href="home.html">Home </a></li>
+                                    <li class="nav-item"><a class="nav-link" href="company_portfolio.html">Portfolio </a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact </a></li>
+                                    <li class="nav-item"><a class="nav-link" href="login_register.html">Login/ Register </a></li>
+                                    <li class="nav-item"><a class="nav-link" href="submit_website_idea.html">Submit Idea </a></li>
+                                    <li class="nav-item"><a class="nav-link" href="idea_blog.html">Idea Showcase </a></li>
                                 </ul>
-                                <a class="btn-primary btn rounded-pill px-4 ml-lg-4" href="#">Apply Now to Join our Team!<i class="fas fa-arrow-right ml-1"></i></a>
+                                <a class="btn-primary btn rounded-pill px-4 ml-lg-4" href="application.html">Apply Now!<i class="fas fa-arrow-right ml-1"></i></a>
                             </div>
                         </div>
                     </nav>
-                    <header class="page-header page-header-dark bg-img-cover overlay overlay-60" style='background-image: url("https://source.unsplash.com/F1I4IN86NiE/1600x1200")'>
+                    <header class="page-header page-header-dark bg-img-cover overlay overlay-60" style='background-image: url("https://source.unsplash.com/LJ9KY8pIH3E/1600x1200")'>
                         <div class="page-header-content py-15">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-8">
-                                        <h1 class="page-header-title">Viktor Velikov</h1>
-                                        <img class="img-fluid rounded mb-4 mb-lg-0" src="assets/img/images/Viktor.jpg" alt="Viktor">
-                                        <p class="page-header-text mb-5">I am an ecommerce software guru specializing in e-logistics solutions based in Oakland, CA</p>
-                                        <a class="btn btn-marketing rounded-pill btn-teal lift lift-sm" href="#!"><i class="fas fa-file-pdf mr-2"></i>Download Resume</a>
+                                        <h1 class="page-header-title">{{user.first_name}} {{user.last_name}}</h1>
+                                        <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ ?Viktor- an image class would have to be in models or they would have to have an upload button to have their image appear?}}" alt="user">
+                                        <p class="page-header-text mb-5">{{In fact, all the user info that would appear on this page would have to have been entered into a form, or downloaded per your api}}</p>
+                                        <a class="btn btn-marketing rounded-pill btn-teal lift lift-sm" href="register_website_idea.html"><i class="fas fa-file-pdf mr-2"></i>Create Your Website's Idea</a>
                                     </div>
                                 </div>
                             </div>
@@ -54,27 +55,27 @@
                             <hr class="mt-0 mb-5" />
                             <div class="row mb-5">
                                 <div class="col-lg-8">
-                                    <h4 class="mb-0">Senior Sales Analyst</h4>
-                                    <p class="lead">Intelitec Solutions</p>
-                                    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                                    <h4 class="mb-0">{{Job.Title(get_id=1)}}</h4>
+                                    <p class="lead">{{company.name(get_id=1)}}</p>
+                                    <p>{{job_duty.description(get_id=1)}}</p>
                                 </div>
-                                <div class="col-lg-4 text-lg-right"><div class="text-gray-400 small">May 2018 - Present</div></div>
+                                <div class="col-lg-4 text-lg-right"><div class="text-gray-400 small">{{job.time_range(get_id=1)}}</div></div>
                             </div>
                             <div class="row mb-5">
                                 <div class="col-lg-8">
-                                    <h4 class="mb-0">Marketing Analyst</h4>
-                                    <p class="lead">Shout Media Productions</p>
-                                    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+                                    <h4 class="mb-0">{{Job.Title(get_id=2)}}</h4>
+                                    <p class="lead">{{company.name(get_id=2)}}</p>
+                                    <p>{{job_duty.description(get_id=2)}}</p>
                                 </div>
-                                <div class="col-lg-4 text-lg-right"><div class="text-gray-400 small">August 2015 - May 2018</div></div>
+                                <div class="col-lg-4 text-lg-right"><div class="text-gray-400 small">{{job.time_range(get_id=2)}}</div></div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-8">
-                                    <h4 class="mb-0">Sales Representative</h4>
-                                    <p class="lead">Gamby Enterprises</p>
-                                    <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+                                    <h4 class="mb-0">{{Job.Title(get_id=3)}}</h4>
+                                    <p class="lead">{{company.name(get_id=3)}}</p>
+                                    <p>{{job_duty.description(get_id=3)}}</p>
                                 </div>
-                                <div class="col-lg-4 text-lg-right"><div class="text-gray-400 small">June 2011 - August 2015</div></div>
+                                <div class="col-lg-4 text-lg-right"><div class="text-gray-400 small">{{job.time_range(get_id=3)}}</div></div>
                             </div>
                         </div>
                         <div class="svg-border-angled text-light">
@@ -87,19 +88,19 @@
                             <hr class="mt-0 mb-5" />
                             <div class="row mb-5">
                                 <div class="col-lg-8">
-                                    <h4 class="mb-0">University of Colorado Boulder</h4>
-                                    <p class="lead">Master of Business Administration (MBA)</p>
-                                    <p>Graduated from University of Colorado Boulder's lockstep evening MBA program</p>
+                                    <h4 class="mb-0">{{education.institution_name(get_id=1)}}</h4>
+                                    <p class="lead">{{education.degree_type(get_id=1)}}</p>
+                                    <p>{{education.description(get_id=1)}}</p>
                                 </div>
-                                <div class="col-lg-4 text-lg-right"><div class="text-gray-400 small">September 2013 - May 2015</div></div>
+                                <div class="col-lg-4 text-lg-right"><div class="text-gray-400 small">{{education.time_range(get_id=1)}}</div></div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-8">
-                                    <h4 class="mb-0">Clarcton University</h4>
-                                    <p class="lead">Bachelor of Science</p>
-                                    <p>Graduated with a degree in Civil Engineering, with a specialization in product management and a minor in Finance</p>
+                                    <h4 class="mb-0">{{education.institution_name(get_id=2)}}</h4>
+                                    <p class="lead">{{education.degree_type(get_id=2)}}</p>
+                                    <p>{{education.description(get_id=2)}}</p>
                                 </div>
-                                <div class="col-lg-4 text-lg-right"><div class="text-gray-400 small">August 2009 - May 2013</div></div>
+                                <div class="col-lg-4 text-lg-right"><div class="text-gray-400 small">{{education.time_range(get_id=2)}}</div></div>
                             </div>
                         </div>
                         <div class="svg-border-angled text-white">
@@ -112,14 +113,14 @@
                             <hr class="mt-0 mb-5" />
                             <div class="row">
                                 <div class="col-lg-8">
-                                    <p>Attention to detail and a general sense of product viability are my specialties. I am motivated to provide value in a team environment, and I am committed to creating the best possible experience for customers.</p>
+                                    <p>{{skills.description}}</p>
                                     <ul class="mb-0 text-gray-700">
-                                        <li>Market analysis</li>
-                                        <li>Supply chain management</li>
-                                        <li>Business plan preparation</li>
-                                        <li>Technological entrepreneurship</li>
-                                        <li>Report generation</li>
-                                        <li>Presentation creation</li>
+                                        <li>{{skills.category(get_id=1)}}</li>
+                                        <li>{{skills.category(get_id=2)}}</li>
+                                        <li>{{skills.category(get_id=3)}}</li>
+                                        <li>{{skills.category(get_id=4)}}</li>
+                                        <li>{{skills.category(get_id=5)}}</li>
+                                        <li>{{skills.category(get_id=6)}}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -134,8 +135,8 @@
                             <hr class="mt-0 mb-5" />
                             <div class="row">
                                 <div class="col-lg-8">
-                                    <p>Apart from being an ecommerce specialist, I am a bourbon conoisseur. Please visit my website to taste my personal craft! During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-                                    <p>When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the marketing management world.</p>
+                                    <p>{{interest.description(get_id=1)}}</p>
+                                    <p>{{interest.description(get_id=2)}}</p>
                                 </div>
                             </div>
                         </div>
@@ -149,9 +150,9 @@
                             <hr class="mt-0 mb-5" />
                             <div class="row">
                                 <div class="col-lg-8 mb-4 mb-lg-0">
-                                    <h3>Viktor Velikov</h3>
-                                    <p class="lead mb-0">(355) 692-8323</p>
-                                    <a href="#!">vvelikov@vmsconsulting.com</a>
+                                    <h3>{{contact.first_name}} {{contact.last_name</h3>
+                                    <p class="lead mb-0">{{contact.phone_number}}</p>
+                                    <a href="#!">{{contact.email}}</a>
                                 </div>
                                 <div class="col-lg-4 text-lg-right">
                                     <a class="btn btn-marketing btn-teal rounded-pill" href="#!"><i class="fas fa-file-pdf mr-2"></i>Download Resume</a>
